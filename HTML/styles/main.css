@@ -1,0 +1,181 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+  line-height: 1;
+  font-family: 'Roboto', sans-serif;
+}
+
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
+.theme-wrapper {
+  background-color: #003c77;
+}
+
+nav ul{
+  margin-top: 6px;
+}
+
+nav ul li{
+  /* 
+  border-width: 2px;
+  border-style: solid;
+  border-color: yellow;
+  */
+  display: inline;
+  padding-right: 8px;
+}
+
+nav ul li a{
+  color: #ffffff;
+}
+
+.bdr{
+  border: 2px solid red;
+}
+
+.hero-section{
+  padding: 0 10%;
+  /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#d0e4f7+0,73b1e7+24,0a77d5+50,539fe1+79,87bcea+100;Blue+Pipe+%231 */
+  background: #d0e4f7; /* Old browsers */
+  background: -moz-linear-gradient(top,  #d0e4f7 0%, #73b1e7 24%, #0a77d5 50%, #539fe1 79%, #87bcea 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(top,  #d0e4f7 0%,#73b1e7 24%,#0a77d5 50%,#539fe1 79%,#87bcea 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom,  #d0e4f7 0%,#73b1e7 24%,#0a77d5 50%,#539fe1 79%,#87bcea 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d0e4f7', endColorstr='#87bcea',GradientType=0 ); /* IE6-9 */
+
+}
+.hero-title{
+  font-size: 36px;
+  text-align: center;
+  padding: 60px 0 25px 0;
+}
+.hero-image, .hero-content{
+  width: 49.2%;
+}
+.hero-image{
+  text-align: center;
+}
+.hero-content{
+  line-height: 28px;
+  text-align: left;
+}
+
+
+/* util classes */ 
+.fLeft{
+  float: left;
+}
+.fRight{
+  float: right;
+}
+.clear{
+  clear: both;
+}
+
+.textCenter{
+  text-align: center;
+}
+
+.primary-btn{
+  background: red;
+  color: #fff;
+  font-size: 28px;
+  border: solid 1px red;
+  border-radius: 6px;
+  padding: 10px 32px;
+  margin: 20px 6px;
+}
+
+.primary-btn:hover{
+  background:#770000;
+  border: solid 1px #770000;
+}
+
+.default-btn{
+  background: #eaeaea;
+  color: #003c77;
+  font-size: 28px;
+  border: solid 1px #ccc;
+  border-radius: 6px;
+  padding: 10px 32px;
+  margin: 20px 6px;
+  text-decoration: none;
+}
+.default-btn:hover{
+  background:#ddd;
+  border: solid 1px #ddd;
+}
+
+.contact-form{
+  padding: 20px 30%;
+}
+
+input, textarea{
+  width: 100%;
+  padding: 6px 10px;
+  border-radius: 3px;
+  border: solid 1px #ccc;
+}
+
+input[type='submit']{
+  background: blue;
+  width: 49.3%;
+  padding: 14px;
+  margin-right: 10px;
+  color: #fff;
+}
+
+input[type='reset']{
+  width: 44%;
+  padding: 14px;
+}
+
+.page-title{
+  color: green;
+  font-size: 36px;
+  text-align: center;
+  padding: 20px;
+}
+
