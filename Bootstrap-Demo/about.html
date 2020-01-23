@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Servion - Official Website</title>
+
+  <!-- bootstrap css -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+  <link rel="stylesheet" href="./styles/servion-theme.css">
+
+
+  
+
+</head>
+
+<body>
+
+  <header>
+    <nav class="navbar navbar-expand-md navbar-dark header-bg fixed-top">
+      <a class="navbar-brand" href="#">
+        <img src="./images/ServionLogo.png" alt="Servion Logo">
+      </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault"
+        aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Products</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Services</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="about.html">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="contact.html">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <main class="container" role="main" 
+    style="padding-top:55px;">
+    <h1>About - JS DOM Manipulation</h1>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab, ipsa eius ad enim officiis eligendi impedit non nostrum et atque architecto iure porro sapiente praesentium aut in. Ut, quisquam pariatur?</p>
+    <button 
+    id="switchModeBtn" type="button" 
+    class="btn btn-info">Switch to Dark Mode</button>
+
+    <hr>
+    <p>Demo - Show / Hide </p>
+    <p id="para1">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iste iusto dicta ad quod doloremque, tempora exercitationem voluptatem autem quam mollitia quisquam aliquid quibusdam facere nihil incidunt molestiae eaque? Consequuntur, commodi?</p>
+    <button type="button" class="btn btn-danger" id="toggleBtn">Hide</button>
+
+    <hr>
+    <p>Add Element - Demo</p>
+    <button type="button" id="addElementBtn">Add Element</button>
+    <div id="elementPlaceholder">
+        
+    </div>
+
+    <hr>
+    <button type="button" onclick="openCustomizedWindow(event)">Open customized Window</button>
+
+    <br><br>
+    <button type="button" id="randomBtn">Understanding this Keyword</button>
+  </main>
+
+  <footer class="container">
+    
+    <p class="float-right"><a href="#">Back to top</a></p>
+    <p>&copy; 2020-2021 Servion. &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a></p>
+  </footer>
+
+  <!-- loading bootstrap JS-->
+  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+  <script src="./scripts/main.js"></script>
+
+</body>
+
+</html>

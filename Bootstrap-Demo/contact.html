@@ -51,9 +51,17 @@
   <main role="main" class="container" style="padding-top:55px;">
 
     <div class="row">
+      <div class="col-md-12">
+        <button type="button" 
+        onclick="loadDataHandler()">Load Data</button>
+      </div>
+    </div>
+
+
+    <div class="row">
       <div class="col-md-6 offset-md-3">
         <h1 class="text-center">Get in touch with us</h1>
-        <form>
+        <form onsubmit="saveContactHandler(event)">
           <div class="form-group row">
             <label for="inputName" class="col-sm-2 col-form-label">Name</label>
             <div class="col-sm-10">
@@ -63,7 +71,7 @@
           <div class="form-group row">
             <label for="staticEmail" class="col-sm-2 col-form-label">Email</label>
             <div class="col-sm-10">
-              <input type="email" class="form-control" id="staticEmail">
+              <input type="email" class="form-control" id="inputEmail">
             </div>
           </div>
           <div class="form-group row">
@@ -113,6 +121,7 @@
     <p>&copy; 2020-2021 Servion. &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a></p>
   </footer>
 
+  <script src="./scripts/main.js"></script>
 </body>
 
 </html>
