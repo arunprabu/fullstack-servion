@@ -124,3 +124,24 @@ function saveContactHandler(event) {
   xhttp.open("POST", 'https://jsonplaceholder.typicode.com/users', true);
   xhttp.send(myData);
 }
+
+
+function onLocationAllowHandler(position){
+  console.log(position);
+  var myLocationDiv = document.getElementById('myLocation');
+  myLocationDiv.innerHTML = "Latitude: " + position.coords.latitude + 
+  "<br>Longitude: " + position.coords.longitude;
+}
+
+function onLocationDenyHandler(){
+  alert('denied location access');
+}
+
+function findLocationHandler(){
+  //check browser support for geolocation 
+  if(navigator.geolocation){
+    navigator.geolocation.getCurrentPosition(onLocationAllowHandler, onLocationDenyHandler);
+  }else{
+    alert('This browser will not support for geolocation')
+  }
+}

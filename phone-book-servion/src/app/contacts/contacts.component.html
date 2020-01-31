@@ -1,0 +1,24 @@
+<div class="container">
+  <div class="row">
+    <section class="col-sm-12 main-section ">
+      <div class="jumbotron">
+        <h1 class="display-4">Contact Manager App!</h1>
+        <a class="btn btn-primary btn-lg" routerLink="/contacts/new" role="button">Create New Contact</a>
+      </div>
+    </section>
+  </div>
+
+  <div class="row">
+
+    <div class="card col-sm-3" 
+    *ngFor="let contact of contactList">
+      <div class="card-body">
+        <h5 class="card-title">{{contact.name}}</h5>
+        <p class="card-text">{{contact.phone}}</p>
+        <a routerLink="/contacts/{{contact.id}}" class="link">View Details</a>
+      </div>
+    </div>
+
+  </div>
+
+</div>

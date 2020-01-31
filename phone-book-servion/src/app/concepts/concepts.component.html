@@ -1,0 +1,116 @@
+<div class="container">
+    <p>Data Received from Child Comp is: {{dataFromCEB}}</p>
+
+    <ul class="nav nav-tabs" id="myTab" role="tablist">
+        <li class="nav-item">
+            <a class="nav-link active" id="basic-binding-tab" data-toggle="tab" href="#basic-binding" role="tab" aria-controls="basic-binding"
+                aria-selected="true">SI, PB, EB, TWB</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" id="cpb-tab" data-toggle="tab" href="#cpb" role="tab" aria-controls="cpb"
+                aria-selected="false">CPB</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" id="ceb-tab" data-toggle="tab" href="#ceb" role="tab" aria-controls="ceb"
+                aria-selected="false">CEB</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" id="directives-tab" data-toggle="tab" href="#directives" role="tab" aria-controls="directives"
+                aria-selected="false">Directives</a>
+        </li>
+    </ul>
+    <div class="tab-content" id="myTabContent">
+        <div class="tab-pane fade show active" id="basic-binding" role="tabpanel" 
+        aria-labelledby="basic-binding-tab">
+            Basic Types of Binding
+            <div>
+                <h2>String Interpolation</h2>
+                <p>My app name is: {{appName}}</p>
+                <p>Dev with exp: {{devExp}}</p>
+                <p>Relative Exp: {{skillsList[2]}}</p>
+                <p title="{{appName}}">Mouse over to see app name</p>
+                <input type="text" value="{{appName}}">
+                <p>Getting exp from a fn: {{getExp()}}</p>
+
+                <h2>Property Binding </h2>
+                <p [title]="devName">Mouse over to see the dev name</p>
+                <input type="text" [value]='devName'>
+                <div class="redText">Testing -- will be in red color</div>
+                <div [class]="redText">Testing -- will not work as no such variable in ts</div>
+
+                <div [ngClass]="{ 'redText': true }">Check whether it works or not</div>
+                <div [ngClass]="{ 'alert alert-success': isLoggedIn }">Authenticated</div>
+                
+                <!-- todo: try ngStyle -->
+
+                <hr>
+                <h2>Event Binding</h2>
+
+                <button type="button" (click)="onBtnClick($event)">Click me...</button>
+
+                <h2>Two Way Binding</h2>
+                <p>{{appName}}</p> <!-- string intepolation-->
+                <input type="text" [value]="appName"> <!-- prop binding-->
+                <br>
+                <br>
+                <!-- two way binding-->
+                <input type="text" [(ngModel)]="appName">
+            </div>
+        </div>
+        <div class="tab-pane fade" id="cpb" role="tabpanel" aria-labelledby="cpb-tab">
+            <h2>Custom Property Binding</h2>
+            <!-- step2: use the custom proerty binding -->
+            <app-cpb></app-cpb>
+            <app-cpb [age]="10"></app-cpb>
+            <app-cpb [age]="40"></app-cpb>
+            <app-cpb [age]="getAge()"></app-cpb>
+
+        </div>
+        <div class="tab-pane fade" id="ceb" role="tabpanel" aria-labelledby="ceb-tab">
+            Custom Event Binding
+
+            <!-- step 4 in ceb: add event handler -->
+            <app-ceb (profileLoaded)="profileLoadedHandler($event)"></app-ceb>
+        </div>
+        <div class="tab-pane fade" id="directives" role="tabpanel" aria-labelledby="directives-tab">
+            Directives
+            <pre>
+                ---
+                Spl instruction to the DOM 
+
+                1. Attribute Directives 
+                    ngClass, ngStyle, routerLink,  
+                2. Structural Directives
+                    impact the structure of the page (html)
+                    *ngIf, *ngFor, ngSwitch 
+            </pre>
+
+            <h2>*ngIf</h2>
+            <div class="alert alert-success" 
+            *ngIf="isLoggedIn; else notAuthWrapper">
+                You are Authenticated!
+            </div>
+
+            <ng-template #notAuthWrapper>
+                <div class="alert alert-danger">
+                    You are not Authenticated!
+                </div>
+            </ng-template>
+
+            <h2>*ngFor</h2>
+            <ul>
+                <li *ngFor="let skill of skillsList">
+                    {{skill}}
+                </li>
+            </ul>
+
+            <!-- todo: Try finding index in the above for loop-->
+            <!-- todo: ngSwitch -->
+
+            <h2>Custom Directive</h2>
+            <div appColorizer>
+                Testing colorizer directive
+            </div>
+        </div>
+    </div>
+</div>

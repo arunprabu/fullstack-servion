@@ -1,0 +1,31 @@
+<div class="container">
+
+  <h1>My Profile</h1>
+  <p>Profile Name: {{profileName}}</p>
+
+  <input type="text" 
+    value="{{profileName}}" #profileNameInput>
+  <button type="button" 
+  (click)="onProfileNameChange(profileNameInput)">Change Name</button>
+
+  
+  <h1>Pipes</h1>
+  <p>transform info from one format to another</p>
+
+  <hr>
+  
+  <p>{{randomText}}</p>
+  <p>{{randomText | uppercase }}</p>
+  <hr>
+
+  <p>{{today}}</p>
+  <p>{{today | date }}</p>
+  <p>{{today | date | uppercase }}</p> 
+  <p>{{today | date:'dd/MM/yyyy' }}</p> 
+  <p>{{today | date:'dd-MMMM-yyyy hh:mm:ss a' }}</p> 
+
+  <h4>Custom Pipe - ng g p shared/pipes/ellipsis</h4>
+  <p>{{dummyText}}</p>
+  <p>{{dummyText | ellipsis }}</p>
+  <p>{{dummyText | ellipsis:60}}</p>
+</div>
